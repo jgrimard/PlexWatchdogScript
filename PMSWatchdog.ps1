@@ -1,5 +1,10 @@
 # JG 2/16/2022
 # Script to check if Plex is working properly and re-start it's process if not.
+# Create 2 tasks in Task Scheduler:
+#  1) "Plex Media Server" To start Plex Media Server at system startup.
+#    a) Action = "C:\Program Files (x86)\Plex\Plex Media Server\Plex Media Server.exe"
+#  2) "Plex Watchdog" To run this script every 5 minutes, check "Run whether user is logged on or not" to avoid a powershell window.
+#    a) Action = powershell -File "C:\xxxxxxxx\PMSWatchdog.ps1"
 # Based on https://github.com/Suron12/PlexWatchdogScript
 #
 $HTTP_Request = [System.Net.WebRequest]::Create('http://localhost:32400/web/index.html')
@@ -27,3 +32,4 @@ Else {
     Start-ScheduledTask "\Jason\Plex Media Server"
     Start-Sleep -Seconds 5
 }
+
