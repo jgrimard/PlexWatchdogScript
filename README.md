@@ -1,5 +1,5 @@
 # PlexWatchdogScript
-Powershell scripts that periodically checks whether the local plex related websites are responding correctly, and restarts the services if not.
+Powershell script that checks whether the local plex website is responding correctly, and restarts the process if not.
 
 ### To use
 Create 2 tasks in Task Scheduler:
