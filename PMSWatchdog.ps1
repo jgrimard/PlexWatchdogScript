@@ -1,5 +1,5 @@
 # JG 2/16/2022
-# Script to check if Plex is working properly and re-start it's process if not.
+# Powershell script that checks whether the local plex website is responding correctly, and restarts the process if not.
 # Create 2 tasks in Task Scheduler:
 #  1) "Plex Media Server" To start Plex Media Server at system startup.
 #    a) Action = "C:\Program Files (x86)\Plex\Plex Media Server\Plex Media Server.exe"
